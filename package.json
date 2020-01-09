@@ -1,0 +1,24 @@
+{
+  "name": "wowaffixes",
+  "version": "1.0.0",
+  "description": "Weekly World of Warcraf's Affixs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhosan7/wowaffixes.git"
+  },
+  "keywords": [
+    "wow",
+    "affixs",
+    "weekly"
+  ],
+  "author": "jhosan7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhosan7/wowaffixes/issues"
+  },
+  "homepage": "https://github.com/Jhosan7/wowaffixes#readme"
+}
