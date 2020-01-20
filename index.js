@@ -1,8 +1,9 @@
 const lang = require('./lang')
-const US_Start_Week = 1557828000
-const EU_Start_Week = US_Start_Week + 57600 //+16 hours
-const Delay = 0
+const US_Start_Week = 1557828000 // US Servers start week
+const EU_Start_Week = US_Start_Week + 57600 // +16 hours from US Servers
+const Delay = 0 // Only if need some week delay in the future
 
+// Affixes ID list
 const Affixes_List = [
 	[ 7, 2, 10 ],
 	[ 11, 4, 9 ],
@@ -31,10 +32,10 @@ module.exports = (region = 'eu', _lang = 'en', weeks = 0) => {
 		current_week = Math.floor((Math.floor(new Date() / 1000) - EU_Start_Week) / 604800)
 
 	if (_lang == 'numbers')
-		return Affixes_List[ Math.floor((current_week + Delay) % Affixes_List.length) ]
+		return Affixes_List[ (current_week + Delay) % Affixes_List.length ]
 	else {
 		var TAffixes = []
-		Affixes_List[ Math.floor((current_week + Delay + weeks) % Affixes_List.length) ].forEach(element => {
+		Affixes_List[ (current_week + Delay + weeks) % Affixes_List.length ].forEach(element => {
 			if (!lang[ _lang ][ element ])
 				if (!lang[ 'en' ][ element ])
 					TAffixes.push(element)

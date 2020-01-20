@@ -1,6 +1,6 @@
 {
   "name": "wowaffixes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Weekly World of Warcraf's Affixs",
   "main": "index.js",
   "scripts": {
