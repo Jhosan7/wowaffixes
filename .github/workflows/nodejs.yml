@@ -27,3 +27,13 @@ jobs:
         npm test
       env:
         CI: true
+    - name: Slack Notification
+      uses: homoluctus/slatify@master
+      if: always()
+      with:
+        type: ${{ job.status }}
+        job_name: '*Test*'
+        mention: 'here'
+        mention_if: 'failure'
+        channel: '#random'
+        url: ${{ secrets.SLACK_WEBHOOK }}
